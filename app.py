@@ -53,6 +53,7 @@ def main():
     
     # User inputs in sidebar
     with st.sidebar:
+        st.title("🌦️ GIAICWeather App ")
         st.title("🌦️ WeatherWise Searh Bar")
         st.header("Search Your City Weather")
         city = st.text_input("Enter City Name", "Karachi")
@@ -88,7 +89,8 @@ def main():
                          f"Gusts: {wind_data.get('gust', 0)}")
             
             # Weather condition display
-            st.subheader(f"{get_weather_icon(weather_info['main'])} Current Conditions")
+            
+            st.subheader(f"{get_weather_icon(weather_info['main'])} Current Conditions of {city} city")
             st.write(f"**{weather_info['main']}** ({weather_info['description']})")
             
             # Extended details section
