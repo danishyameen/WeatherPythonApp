@@ -70,6 +70,12 @@ def main():
             wind_data = weather_data["wind"]
             sys_data = weather_data["sys"]
             
+            # Weather condition display
+            
+            st.subheader(f"{get_weather_icon(weather_info['main'])} Current City: {city.capitalize()}")
+            st.write(f"**{weather_info['main']}** ({weather_info['description']})")
+
+
             # Display basic weather info
             temp_unit = "°C" if unit_system == "metric" else "°F"
             col1, col2, col3 = st.columns(3)
@@ -87,10 +93,10 @@ def main():
                          f"{wind_data['speed']} {'m/s' if unit_system == 'metric' else 'mph'}",
                          f"Gusts: {wind_data.get('gust', 0)}")
             
-            # Weather condition display
+            # # Weather condition display
             
-            st.subheader(f"{get_weather_icon(weather_info['main'])} Current City: {city.capitalize()}")
-            st.write(f"**{weather_info['main']}** ({weather_info['description']})")
+            # st.subheader(f"{get_weather_icon(weather_info['main'])} Current City: {city.capitalize()}")
+            # st.write(f"**{weather_info['main']}** ({weather_info['description']})")
             
             # Extended details section
             if show_details:
