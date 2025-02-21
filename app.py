@@ -82,16 +82,16 @@ def main():
             
             with col1:
                 st.metric("Temperature", 
-                         f"{main_data['temp']}{temp_unit}",
-                         f"Feels like {main_data['feels_like']}{temp_unit}")
+                    f"{main_data['temp']}{temp_unit}",
+                    f"Feels like {main_data['feels_like']}{temp_unit}")
             
             with col2:
                 st.metric("Humidity", f"{main_data['humidity']}%")
             
             with col3:
                 st.metric("Wind Speed", 
-                         f"{wind_data['speed']} {'m/s' if unit_system == 'metric' else 'mph'}",
-                         f"Gusts: {wind_data.get('gust', 0)}")
+                    f"{wind_data['speed']} {'m/s' if unit_system == 'metric' else 'mph'}",
+                    f"Gusts: {wind_data.get('gust', 0)}")
             
             # # Weather condition display
             
