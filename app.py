@@ -89,7 +89,7 @@ def main():
             
             # Weather condition display
             
-            st.subheader(f"{get_weather_icon(weather_info['main'])} Current Conditions of {city} city")
+            st.subheader(f"{get_weather_icon(weather_info['main'])} Current City: {city.capitalize()}")
             st.write(f"**{weather_info['main']}** ({weather_info['description']})")
             
             # Extended details section
