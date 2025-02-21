@@ -53,8 +53,7 @@ def main():
     
     # User inputs in sidebar
     with st.sidebar:
-        st.title("🌦️ GIAICWeather App ")
-        st.title("🌦️ WeatherWise Searh Bar")
+        st.header("🌦️ GIAIC - Weather App ")
         st.header("Search Your City Weather")
         city = st.text_input("Enter City Name", "Karachi")
         unit_system = st.selectbox("Select Unit System", ["metric", "imperial"])
