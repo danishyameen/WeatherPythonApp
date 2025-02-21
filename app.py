@@ -5,7 +5,7 @@ from datetime import datetime
 
 # Set page configuration
 st.set_page_config(
-    page_title=" GIAIC - WeatherWise",
+    page_title=" GIAIC - Weather Wise",
     page_icon="🌤️",
     layout="centered",
     initial_sidebar_state="expanded"
@@ -48,8 +48,8 @@ def get_weather_icon(condition):
 # Build the UI components
 def main():
     # Page header
-    st.title("🌦️ GIAIC - WeatherWise")
-    st.title("Real-Time Weather Dashboard")
+    st.title("🌦️ GIAIC - Weather Wise")
+    st.title("Real-Time Live Dashboard")
     
     # User inputs in sidebar
     with st.sidebar:
